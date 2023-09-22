@@ -7,7 +7,7 @@ const userRoute = require('./routes/user')
 const productRoute = require('./routes/product')
 
 const mongoDB = mongoose
-  .connect(process.env.CONNECTION_URI, {
+  .connect(process.env.CONNECTION_URI.toString(), {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
