@@ -7,10 +7,13 @@ const userRoute = require('./routes/user')
 const productRoute = require('./routes/product')
 
 const mongoDB = mongoose
-  .connect(process.env.CONNECTION_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
+  .connect(
+    'mongodb+srv://begli:kaka4012@shop.26n0g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    }
+  )
   .then(() => console.log('DB Connection Successful!'))
   .catch(err => {
     console.log(err)
